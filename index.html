@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Art Archive</title>
+  <title>h000000nkim</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <script src="scripts.js"></script>
 </head>
 <body>
   <header>
-    <h1>My Art Archive</h1>
+    <h1>h000000nkim</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -24,9 +26,13 @@
       <h2>Welcome</h2>
       <p>This site is a simple archive inspired by various cultural websites. Browse the sections to learn more.</p>
     </section>
+    <div id="markdown-display"></div>
   </main>
   <footer>
-    <p>&copy; 2025 My Art Archive</p>
+    <p>&copy; 2025 h000000nkim</p>
+    <p>GitHub: <a href="https://github.com/h000000nkim" target="_blank">https://github.com/h000000nkim</a></p>
+    <p>Email: <button onclick="copyEmail()">Copy Email</button></p>
   </footer>
+  <script>loadMarkdownFiles('markdown-display');</script>
 </body>
 </html>
