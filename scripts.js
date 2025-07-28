@@ -24,3 +24,27 @@ function loadMarkdownFiles(containerId) {
     })
     .catch(err => console.error('Error loading markdown', err));
 }
+
+// Initialize scroll-based effects on pages that opt in by using the
+// "hide-header" class on the body element. The header remains hidden
+// until the user scrolls, and the page background color changes when
+// scrolling as well.
+function initScrollEffects() {
+  const body = document.body;
+  if (!body.classList.contains('hide-header')) return;
+
+  const header = document.querySelector('header');
+
+  const toggle = () => {
+    if (window.scrollY > 50) {
+      header.classList.add('visible');
+      body.classList.add('scrolled');
+    } else {
+      header.classList.remove('visible');
+      body.classList.remove('scrolled');
+    }
+  };
+
+  toggle();
+  window.addEventListener('scroll', toggle);
+}
