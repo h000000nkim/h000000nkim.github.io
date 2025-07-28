@@ -6,3 +6,32 @@ nav li { margin: 0 1rem; }
 nav a { color: #fff; text-decoration: none; }
 main { padding: 1rem; }
 footer { background: #f0f0f0; text-align: center; padding: 1rem 0; font-size: 0.9rem; }
+/* Home page adjustments */
+body.home header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s, background-color 0.3s;
+  background: rgba(51,51,51,0.8);
+}
+body.home header.show {
+  transform: translateY(0);
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-box {
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+}
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

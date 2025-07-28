@@ -8,8 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
   <script src="scripts.js"></script>
 </head>
-<body>
-  <header>
+<body class="home">
+  <header id="main-header">
     <h1>h000000nkim</h1>
     <nav>
       <ul>
@@ -21,6 +21,11 @@
       </ul>
     </nav>
   </header>
+  <section class="hero">
+    <div class="photo-box">
+      <img src="images/hero.svg" alt="Example image">
+    </div>
+  </section>
   <main>
     <section>
       <h2>Welcome</h2>
@@ -35,6 +40,9 @@
       <a href="#" onclick="copyEmail(); return false;">E-mail</a> |
       <a href="privacy.html">Privacy</a></p>
   </footer>
-  <script>loadMarkdownFiles('markdown-display');</script>
+  <script>
+    loadMarkdownFiles('markdown-display');
+    initHome();
+  </script>
 </body>
 </html>

@@ -24,3 +24,21 @@ function loadMarkdownFiles(containerId) {
     })
     .catch(err => console.error('Error loading markdown', err));
 }
+
+function initHome() {
+  const header = document.getElementById('main-header');
+  if (!header) return;
+  const update = () => {
+    const y = window.scrollY;
+    if (y > 50) {
+      header.classList.add('show');
+    } else {
+      header.classList.remove('show');
+    }
+    const ratio = Math.min(1, y / window.innerHeight);
+    const shade = Math.round(253 - 120 * ratio);
+    document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
+  };
+  update();
+  window.addEventListener('scroll', update);
+}
