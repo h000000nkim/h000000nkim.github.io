@@ -4,8 +4,8 @@ function copyEmail() {
     .catch(err => console.error('Failed to copy email', err));
 }
 
-function loadMarkdownFiles(containerId) {
-  const apiUrl = 'https://api.github.com/repos/h000000nkim/h000000nkim.github.io/contents';
+function loadMarkdownFiles(containerId, folder = '') {
+  const apiUrl = `https://api.github.com/repos/h000000nkim/h000000nkim.github.io/contents/${folder}`;
   fetch(apiUrl)
     .then(res => res.json())
     .then(files => {
