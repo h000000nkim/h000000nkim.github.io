@@ -37,3 +37,31 @@ body.scrolled {
 body.hide-header main {
   padding-top: 60px; /* space for fixed header */
 }
+
+/* Archive layout */
+.archive-container {
+  display: flex;
+}
+
+.archive-content {
+  flex: 1;
+}
+
+.archive-sidebar {
+  width: 200px;
+  margin-left: 2rem;
+}
+
+.archive-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.archive-sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.archive-sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
