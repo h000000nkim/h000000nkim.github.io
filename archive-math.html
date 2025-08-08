@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archive - h000000nkim</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
   <script src="scripts.js"></script>
 </head>
 <body>
@@ -34,13 +35,8 @@
         </ul>
       </aside>
       <section class="archive-content">
-        <h2>Archive</h2>
-        <p>A list of archived works will appear here.</p>
-        <ul>
-          <li>Sample Item 1</li>
-          <li>Sample Item 2</li>
-          <li>Sample Item 3</li>
-        </ul>
+        <h2 id="category-title"></h2>
+        <div id="markdown-display"></div>
       </section>
     </div>
   </main>
@@ -51,5 +47,13 @@
       <a href="#" onclick="copyEmail(); return false;">E-mail</a> |
       <a href="privacy.html">Privacy</a></p>
   </footer>
+  <script>
+    const match = window.location.pathname.match(/archive-([^.]+)\.html/);
+    const category = match ? match[1] : '';
+    const title = category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    document.title = title + ' - h000000nkim';
+    document.getElementById('category-title').textContent = title;
+    loadMarkdownFiles('markdown-display', category);
+  </script>
 </body>
 </html>
