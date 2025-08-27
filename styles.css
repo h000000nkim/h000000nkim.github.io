@@ -3,9 +3,17 @@ header { background: #333; color: #fff; padding: 1rem 0; }
 header h1 { margin: 0; text-align: center; font-size: 1.5rem; }
 nav ul { display: flex; justify-content: center; list-style: none; padding: 0; margin: 0; }
 nav li { margin: 0 1rem; }
-nav a { color: #fff; text-decoration: none; }
+nav a {
+  color: #fff; /* 흰색으로 고정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
 main { padding: 1rem; }
 footer { background: #f0f0f0; text-align: center; padding: 1rem 0; font-size: 0.9rem; }
+
+footer a {
+  color: #000; /* 검은색으로 고정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
 
 /* Header hidden on the landing page until scrolled */
 body.hide-header header {
