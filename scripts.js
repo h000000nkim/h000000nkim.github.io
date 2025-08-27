@@ -48,3 +48,16 @@ function initScrollEffects() {
   toggle();
   window.addEventListener('scroll', toggle);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const markdownContent = `
+    # 통계 아카이브
+    통계에 대한 다양한 자료를 여기에 추가합니다.
+    - 평균
+    - 분산
+    - 표준편차
+    `;
+
+    const htmlContent = marked(markdownContent);
+    document.getElementById("markdown-container").innerHTML = htmlContent;
+});

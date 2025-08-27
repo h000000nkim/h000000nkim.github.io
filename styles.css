@@ -77,3 +77,8 @@ body.hide-header main {
   text-decoration: none;
   color: inherit;
 }
+
+#markdown-container {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
